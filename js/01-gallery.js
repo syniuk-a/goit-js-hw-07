@@ -70,6 +70,7 @@ function escCloseModal(event) {
   };
 };
 
+// снимаем прослушиватель 
 function removeClickModalListener() {
   window.removeEventListener('click', removeClickModalListener);
   window.removeEventListener('keydown', escCloseModal);
