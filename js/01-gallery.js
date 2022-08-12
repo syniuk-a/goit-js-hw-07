@@ -44,7 +44,7 @@ function replacementLinkImg(event) {
 // функция открытия модального окна basicLightbox
 function onOpenModal(currentImgUrl) {
   const createModal = basicLightbox.create(
-    `<img class="image__modal" src="${currentImgUrl}"/>`
+    `<img class="modal__image" src="${currentImgUrl}"/>`
   );
   createModal.show();
   // включаем слушателя
@@ -64,7 +64,7 @@ function escCloseModal(event) {
   if (event.code === 'Escape') {
     modal.remove();
     // отключаем слущатель
-    window.removeEventListener('click', escCloseModal);
+    window.removeEventListener('keydown', escCloseModal);
 
     // console.log('modal => ', modal);    
   };
