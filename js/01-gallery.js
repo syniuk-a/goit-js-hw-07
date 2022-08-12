@@ -5,8 +5,6 @@ console.log('galleryItems => ', galleryItems);
 
 // Находим блок галерею
 const galleryEl = document.querySelector('div.gallery');
-// console.log('galleryEl => ', galleryEl);
-
 // создаём в памяти список изображений полученый из галереи
 const galleryList = galleryItems
   .map(
@@ -59,14 +57,12 @@ function escCloseModal(event) {
   // находим модалку
   const modal = document.querySelector('div.basicLightbox');
 
-  // console.log('code =>', event.code);
+  console.log('code =>', event.code);
   // удаляем модалку
   if (event.code === 'Escape') {
     modal.remove();
     // отключаем слущатель
-    window.removeEventListener('keydown', escCloseModal);
-
-    // console.log('modal => ', modal);    
+    window.removeEventListener('keydown', escCloseModal);    
   };
 };
 
